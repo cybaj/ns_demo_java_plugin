@@ -1,0 +1,5 @@
+{
+    "circleci": {
+        "httpsRepositoryURL": "https://github.com/cybaj/ns_demo_java_plugin.git"
+    }
+}
