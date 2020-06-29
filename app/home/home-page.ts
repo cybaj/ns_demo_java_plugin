@@ -1,5 +1,4 @@
 import { AppVersion } from 'nativescript-app-version';
-console.log(new AppVersion().message);
 /*
 In NativeScript, a file with the same name as an XML file is known as
 a code-behind file. The code-behind is a great place to place your view
@@ -8,10 +7,10 @@ logic, and to set up your page’s data binding.
 
 import { NavigatedData, Page } from "tns-core-modules/ui/page";
 
-import { HomeViewModel } from "./home-view-model";
-
 export function onNavigatingTo(args: NavigatedData) {
+    const appversion = new AppVersion()
+    console.log(appversion.message);
     const page = <Page>args.object;
 
-    page.bindingContext = new HomeViewModel();
+    page.bindingContext = appversion;
 }
